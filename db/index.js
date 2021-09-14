@@ -156,6 +156,23 @@ const getPostByTagName= async(tagName)=>
     }
 }
 
+const getAllTags=async()=>
+{
+    try
+    {
+        const{rows:tags}=await client.query(
+            `SELECT *
+            FROM tags;`
+        );
+
+        return tags;
+    }
+    catch (error)
+    {
+        console.error(error);
+    }
+}
+
 const createUser= async(
     {
         username,
@@ -379,6 +396,7 @@ module.exports={
     client,
     getAllUsers,
     getAllPosts,
+    getAllTags,
     getUserById,
     createPost,
     updatePost,

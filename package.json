@@ -7,7 +7,7 @@
     "start": "node index.js",
     "start:dev": "nodemon index.js",
     "seed:dev": "nodemon ./db/seed.js",
-    "reset":"sudo service postgresql restart"
+    "reset": "sudo service postgresql restart"
   },
   "repository": {
     "type": "git",
@@ -21,11 +21,11 @@
   },
   "homepage": "https://github.com/Greg-Mah/juiceBox#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
     "pg": "^8.7.1"
   },
-  "devDependencies": 
-  {
-        "nodemon": "^2.0.12"
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
-
 }
