@@ -4,17 +4,18 @@ const { getAllPosts } = require('../db');
 
 postsRouter.use((req, res, next) => 
 {
-  console.log("A request is being made to /posts");
+    console.log("A request is being made to /posts");
 
-  next();
+    next();
 });
 
 postsRouter.get('/', async (req, res) => 
 {
     const posts = await getAllPosts();
   
-    res.send({
-      posts
+    res.send(
+    {
+        posts
     });
 });
 
